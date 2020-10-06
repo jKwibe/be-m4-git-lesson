@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   def create
+    # create the user
     item = Item.find(params[:item_id])
     @cart.add_item(item.id)
     session[:cart] = @cart.contents
